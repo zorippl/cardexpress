@@ -1,0 +1,49 @@
+.archive-modes{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;grid-column:1/-1}
+.archive-modes .secondary{flex:1;padding:9px 8px}
+.archive-modes [aria-pressed=true]{background:#33442b;color:var(--green);border-color:#628055}
+.photo-scroll{overflow:auto;padding:2px 18px 14px;scrollbar-gutter:stable}
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,var(--tile-size,128px)),1fr));gap:9px}
+.photo-card{position:relative;min-width:0}
+.photo-tile{display:block;width:100%;min-width:0;padding:0;text-align:left;background:#202721;border:1px solid #354030;border-radius:8px;overflow:hidden}
+.photo-card.picked .photo-tile{border-color:var(--green);background:#2d3c28}
+.photo-checkbox{width:16px;height:16px;margin:0;accent-color:var(--green);cursor:pointer;vertical-align:middle}
+.photo-checkbox:disabled{cursor:default;opacity:.45}
+.photo-card>.photo-checkbox{position:absolute;top:6px;left:6px;box-shadow:0 0 0 3px #1116129e;border-radius:3px}
+.photo-tools,.range-tools{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin:0 18px 9px;font-size:11px;color:#a9b7a3}
+.photo-tool-group{display:flex;gap:4px}
+.photo-tools .secondary,.range-tools .secondary{padding:6px 9px}
+.photo-tools [aria-pressed=true]{background:#33442b;color:var(--green);border-color:#628055}
+.range-tools input{width:132px;min-width:0;padding:6px;border:1px solid #3b4739;border-radius:5px;background:#111612;color:#e7ece8}
+.range-tools small{font-size:10px}
+.range-tools .range-error{width:100%;color:#ffb4a5}
+.file-area:focus-visible{outline:1px solid var(--green);outline-offset:-2px}
+.date-item input:indeterminate{background:#4b6341;box-shadow:inset 0 -5px #4b6341,inset 0 -7px var(--green)}
+.photo-list{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0;text-align:left;font-size:11px}
+.photo-list th,.photo-list td{padding:7px 5px;border-bottom:1px solid #313c30}
+.photo-list th{position:sticky;top:0;background:#1b221a;color:#a9b7a3;z-index:1}
+.photo-list th:nth-child(1){width:25px}.photo-list th:nth-child(2){width:35px}.photo-list th:nth-child(4){width:136px}.photo-list th:nth-child(5){width:65px}
+.photo-list td:nth-child(4),.photo-list td:nth-child(5){white-space:nowrap;font-variant-numeric:tabular-nums}
+.photo-list .picked{background:#2d3c28}
+.photo-name{display:block;text-align:left;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0;border:0;background:transparent;color:#e7ece8}
+.photo-name:hover{text-decoration:underline}
+.preview-pick{display:flex;align-items:center;gap:7px;color:#a9b7a3;font-size:11px;cursor:pointer}
+.photo-tile:focus-visible{outline-offset:-2px}
+.photo-frame{display:grid;place-items:center;width:100%;aspect-ratio:4/3;background:#111612;overflow:hidden}
+.photo-frame img{width:100%;height:100%;min-height:0;object-fit:contain}
+.photo-placeholder{display:flex;flex-direction:column;align-items:center;gap:9px;color:#9aaa96;font-size:10px;text-align:center;padding:8px}
+.photo-caption{display:block;padding:8px 9px 9px}
+.photo-caption strong,.photo-caption small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.photo-caption strong{font-size:11px;font-weight:500}
+.photo-caption small{margin-top:5px;color:#a0ae9b;font-size:10px}
+.photo-dialog{width:min(980px,calc(100vw - 64px));max-height:calc(100dvh - 48px);padding:0;border:1px solid #485742;border-radius:14px;background:#1a211a;color:#e7ece8;overscroll-behavior:contain}
+.photo-dialog::backdrop{background:#050805da;backdrop-filter:blur(5px)}
+.photo-dialog-inner{padding:15px 18px}
+.photo-dialog header,.photo-dialog footer{display:flex;align-items:center;justify-content:space-between;gap:13px}
+.photo-dialog header{margin-bottom:13px}
+.photo-dialog header>div{min-width:0}
+.photo-dialog h2{margin:0 0 6px;overflow-wrap:anywhere}
+.photo-dialog small,.photo-dialog footer>span{font-size:11px;color:#a9b7a3}
+.photo-stage{height:min(68dvh,760px);display:grid;place-items:center;background:#0b0e0b;border-radius:8px;overflow:hidden}
+.photo-stage img{width:100%;height:100%;min-height:0;object-fit:contain}
+.photo-stage .photo-placeholder{font-size:13px}
+.photo-dialog footer{margin-top:13px}
